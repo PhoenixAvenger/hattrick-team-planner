@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hattrick Team Planner</title>
+        <meta name="description" content="Hattrick Team Planner">
+        <meta http-equiv="content-language" content="en">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript" src="./js/main.js" async></script>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <header id="header">
+            <h1>Hattrick Team Planner</h1>
+        </header>
+        <nav id="navigation">
+            <div data-tab="calculate-contributions" class="active">Calculate Contributions</div>
+            <div data-tab="calculate-ideal-skills">Calculate Ideal Skills</div>
+        </nav>
+        <div id="main">
+            <section class="calculate-contributions">
+                <div class="player">
+                    <div class="details">
+                        <div class="detail-heading">
+                            Calculate Contributions
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">
+                                Position
+                            </div>
+                            <div class="detail-data">
+                                <select class="position">
+                                    <option value="Wing Back" selected>Wing Back</option>
+                                    <option value="Central Defender Middle">Central Defender Middle</option>
+                                    <option value="Central Defender Outside">Central Defender Outside</option>
+                                    <option value="Winger">Winger</option>
+                                    <option value="Inner Midfielder Middle">Inner Midfielder Middle</option>
+                                    <option value="Inner Midfielder Outside">Inner Midfielder Outside</option>
+                                    <option value="Forward">Forward</option>
+                                </select>
+                                <select class="alignment">
+                                    <option value="Default" selected>Default</option>
+                                    <option value="Towards Defense">Towards Defense</option>
+                                    <option value="Towards Defense [Tech]" class="hidden">Towards Defense [Tech]</option>
+                                    <option value="Towards Wing" class="hidden">Towards Wing</option>
+                                    <option value="Towards Middle">Towards Middle</option>
+                                    <option value="Towards Attack">Towards Attack</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attributes">
+                        <div class="attribute-row" data-attribute="defending">
+                            <div class="attribute-label">
+                                Defending
+                            </div>
+                            <div class="attribute-select">
+                                <select>
+                                    <option value="1" selected="selected">disastrous</option>
+                                    <option value="2">wretched</option>
+                                    <option value="3">poor</option>
+                                    <option value="4">weak</option>
+                                    <option value="5">inadequate</option>
+                                    <option value="6">passable</option>
+                                    <option value="7">solid</option>
+                                    <option value="8">excellent</option>
+                                    <option value="9">formidable</option>
+                                    <option value="10">outstanding</option>
+                                    <option value="11">brilliant</option>
+                                    <option value="12">magnificent</option>
+                                    <option value="13">world class</option>
+                                    <option value="14">supernatural</option>
+                                    <option value="15">titanic</option>
+                                    <option value="16">extra-terrestrial</option>
+                                    <option value="17">mythical</option>
+                                    <option value="18">magical</option>
+                                    <option value="19">utopian</option>
+                                    <option value="20">divine</option>
+                                    <option value="21">divine + 1</option>
+                                    <option value="22">divine + 2</option>
+                                    <option value="23">divine + 3</option>
+                                    <option value="24">divine + 4</option>
+                                    <option value="25">divine + 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="attribute-row" data-attribute="playmaking">
+                            <div class="attribute-label">
+                                Playmaking
+                            </div>
+                            <div class="attribute-select">
+                                <select>
+                                    <option value="1" selected="selected">disastrous</option>
+                                    <option value="2">wretched</option>
+                                    <option value="3">poor</option>
+                                    <option value="4">weak</option>
+                                    <option value="5">inadequate</option>
+                                    <option value="6">passable</option>
+                                    <option value="7">solid</option>
+                                    <option value="8">excellent</option>
+                                    <option value="9">formidable</option>
+                                    <option value="10">outstanding</option>
+                                    <option value="11">brilliant</option>
+                                    <option value="12">magnificent</option>
+                                    <option value="13">world class</option>
+                                    <option value="14">supernatural</option>
+                                    <option value="15">titanic</option>
+                                    <option value="16">extra-terrestrial</option>
+                                    <option value="17">mythical</option>
+                                    <option value="18">magical</option>
+                                    <option value="19">utopian</option>
+                                    <option value="20">divine</option>
+                                    <option value="21">divine + 1</option>
+                                    <option value="22">divine + 2</option>
+                                    <option value="23">divine + 3</option>
+                                    <option value="24">divine + 4</option>
+                                    <option value="25">divine + 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="attribute-row" data-attribute="winger">
+                            <div class="attribute-label">
+                                Winger
+                            </div>
+                            <div class="attribute-select">
+                                <select>
+                                    <option value="1" selected="selected">disastrous</option>
+                                    <option value="2">wretched</option>
+                                    <option value="3">poor</option>
+                                    <option value="4">weak</option>
+                                    <option value="5">inadequate</option>
+                                    <option value="6">passable</option>
+                                    <option value="7">solid</option>
+                                    <option value="8">excellent</option>
+                                    <option value="9">formidable</option>
+                                    <option value="10">outstanding</option>
+                                    <option value="11">brilliant</option>
+                                    <option value="12">magnificent</option>
+                                    <option value="13">world class</option>
+                                    <option value="14">supernatural</option>
+                                    <option value="15">titanic</option>
+                                    <option value="16">extra-terrestrial</option>
+                                    <option value="17">mythical</option>
+                                    <option value="18">magical</option>
+                                    <option value="19">utopian</option>
+                                    <option value="20">divine</option>
+                                    <option value="21">divine + 1</option>
+                                    <option value="22">divine + 2</option>
+                                    <option value="23">divine + 3</option>
+                                    <option value="24">divine + 4</option>
+                                    <option value="25">divine + 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="attribute-row" data-attribute="passing">
+                            <div class="attribute-label">
+                                Passing
+                            </div>
+                            <div class="attribute-select">
+                                <select>
+                                    <option value="1" selected="selected">disastrous</option>
+                                    <option value="2">wretched</option>
+                                    <option value="3">poor</option>
+                                    <option value="4">weak</option>
+                                    <option value="5">inadequate</option>
+                                    <option value="6">passable</option>
+                                    <option value="7">solid</option>
+                                    <option value="8">excellent</option>
+                                    <option value="9">formidable</option>
+                                    <option value="10">outstanding</option>
+                                    <option value="11">brilliant</option>
+                                    <option value="12">magnificent</option>
+                                    <option value="13">world class</option>
+                                    <option value="14">supernatural</option>
+                                    <option value="15">titanic</option>
+                                    <option value="16">extra-terrestrial</option>
+                                    <option value="17">mythical</option>
+                                    <option value="18">magical</option>
+                                    <option value="19">utopian</option>
+                                    <option value="20">divine</option>
+                                    <option value="21">divine + 1</option>
+                                    <option value="22">divine + 2</option>
+                                    <option value="23">divine + 3</option>
+                                    <option value="24">divine + 4</option>
+                                    <option value="25">divine + 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="attribute-row" data-attribute="scoring">
+                            <div class="attribute-label">
+                                Scoring
+                            </div>
+                            <div class="attribute-select">
+                                <select>
+                                    <option value="1" selected="selected">disastrous</option>
+                                    <option value="2">wretched</option>
+                                    <option value="3">poor</option>
+                                    <option value="4">weak</option>
+                                    <option value="5">inadequate</option>
+                                    <option value="6">passable</option>
+                                    <option value="7">solid</option>
+                                    <option value="8">excellent</option>
+                                    <option value="9">formidable</option>
+                                    <option value="10">outstanding</option>
+                                    <option value="11">brilliant</option>
+                                    <option value="12">magnificent</option>
+                                    <option value="13">world class</option>
+                                    <option value="14">supernatural</option>
+                                    <option value="15">titanic</option>
+                                    <option value="16">extra-terrestrial</option>
+                                    <option value="17">mythical</option>
+                                    <option value="18">magical</option>
+                                    <option value="19">utopian</option>
+                                    <option value="20">divine</option>
+                                    <option value="21">divine + 1</option>
+                                    <option value="22">divine + 2</option>
+                                    <option value="23">divine + 3</option>
+                                    <option value="24">divine + 4</option>
+                                    <option value="25">divine + 5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contributions">
+                        <div class="contribution-row" data-contribution="defense-side">
+                            <div class="contribution-label">
+                                Side Defense
+                            </div>
+                            <div class="contribution-score">
+                                
+                            </div>
+                        </div>
+                        <div class="contribution-row" data-contribution="defense-central">
+                            <div class="contribution-label">
+                                Central Defense
+                            </div>
+                            <div class="contribution-score">
+                                
+                            </div>
+                        </div>
+                        <div class="contribution-row" data-contribution="midfield">
+                            <div class="contribution-label">
+                                Midfield
+                            </div>
+                            <div class="contribution-score">
+                                
+                            </div>
+                        </div>
+                        <div class="contribution-row" data-contribution="attack-side">
+                            <div class="contribution-label">
+                                Side Attack
+                            </div>
+                            <div class="contribution-score">
+                                
+                            </div>
+                        </div>
+                        <div class="contribution-row" data-contribution="attack-central">
+                            <div class="contribution-label">
+                                Central Attack
+                            </div>
+                            <div class="contribution-score">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="calculate-ideal-skills hidden">
+                <div class="player">
+                    <div class="details">
+                        <div class="detail-heading">
+                            Calculate Ideal Skills
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">
+                                Position
+                            </div>
+                            <div class="detail-data">
+                                <select class="position">
+                                    <option value="Wing Back" selected>Wing Back</option>
+                                    <option value="Central Defender Middle">Central Defender Middle</option>
+                                    <option value="Central Defender Outside">Central Defender Outside</option>
+                                    <option value="Winger">Winger</option>
+                                    <option value="Inner Midfielder Middle">Inner Midfielder Middle</option>
+                                    <option value="Inner Midfielder Outside">Inner Midfielder Outside</option>
+                                    <option value="Forward">Forward</option>
+                                </select>
+                                <select class="alignment">
+                                    <option value="Default" selected>Default</option>
+                                    <option value="Towards Defense">Towards Defense</option>
+                                    <option value="Towards Defense [Tech]" class="hidden">Towards Defense [Tech]</option>
+                                    <option value="Towards Wing" class="hidden">Towards Wing</option>
+                                    <option value="Towards Middle">Towards Middle</option>
+                                    <option value="Towards Attack">Towards Attack</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attributes">
+                        <div class="attribute-row" data-attribute="defending">
+                            <div class="attribute-label">
+                                Defending
+                            </div>
+                            <div class="attribute-select">
+                                <select>
+                                    <option value="1" selected="selected">disastrous</option>
+                                    <option value="2">wretched</option>
+                                    <option value="3">poor</option>
+                                    <option value="4">weak</option>
+                                    <option value="5">inadequate</option>
+                                    <option value="6">passable</option>
+                                    <option value="7">solid</option>
+                                    <option value="8">excellent</option>
+                                    <option value="9">formidable</option>
+                                    <option value="10">outstanding</option>
+                                    <option value="11">brilliant</option>
+                                    <option value="12">magnificent</option>
+                                    <option value="13">world class</option>
+                                    <option value="14">supernatural</option>
+                                    <option value="15">titanic</option>
+                                    <option value="16">extra-terrestrial</option>
+                                    <option value="17">mythical</option>
+                                    <option value="18">magical</option>
+                                    <option value="19">utopian</option>
+                                    <option value="20">divine</option>
+                                    <option value="21">divine + 1</option>
+                                    <option value="22">divine + 2</option>
+                                    <option value="23">divine + 3</option>
+                                    <option value="24">divine + 4</option>
+                                    <option value="25">divine + 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="attribute-row hidden" data-attribute="playmaking">
+                            <div class="attribute-label">
+                                Playmaking
+                            </div>
+                            <div class="attribute-select">
+                                <select>
+                                    <option value="1" selected="selected">disastrous</option>
+                                    <option value="2">wretched</option>
+                                    <option value="3">poor</option>
+                                    <option value="4">weak</option>
+                                    <option value="5">inadequate</option>
+                                    <option value="6">passable</option>
+                                    <option value="7">solid</option>
+                                    <option value="8">excellent</option>
+                                    <option value="9">formidable</option>
+                                    <option value="10">outstanding</option>
+                                    <option value="11">brilliant</option>
+                                    <option value="12">magnificent</option>
+                                    <option value="13">world class</option>
+                                    <option value="14">supernatural</option>
+                                    <option value="15">titanic</option>
+                                    <option value="16">extra-terrestrial</option>
+                                    <option value="17">mythical</option>
+                                    <option value="18">magical</option>
+                                    <option value="19">utopian</option>
+                                    <option value="20">divine</option>
+                                    <option value="21">divine + 1</option>
+                                    <option value="22">divine + 2</option>
+                                    <option value="23">divine + 3</option>
+                                    <option value="24">divine + 4</option>
+                                    <option value="25">divine + 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="attribute-row hidden" data-attribute="winger">
+                            <div class="attribute-label">
+                                Winger
+                            </div>
+                            <div class="attribute-select">
+                                <select>
+                                    <option value="1" selected="selected">disastrous</option>
+                                    <option value="2">wretched</option>
+                                    <option value="3">poor</option>
+                                    <option value="4">weak</option>
+                                    <option value="5">inadequate</option>
+                                    <option value="6">passable</option>
+                                    <option value="7">solid</option>
+                                    <option value="8">excellent</option>
+                                    <option value="9">formidable</option>
+                                    <option value="10">outstanding</option>
+                                    <option value="11">brilliant</option>
+                                    <option value="12">magnificent</option>
+                                    <option value="13">world class</option>
+                                    <option value="14">supernatural</option>
+                                    <option value="15">titanic</option>
+                                    <option value="16">extra-terrestrial</option>
+                                    <option value="17">mythical</option>
+                                    <option value="18">magical</option>
+                                    <option value="19">utopian</option>
+                                    <option value="20">divine</option>
+                                    <option value="21">divine + 1</option>
+                                    <option value="22">divine + 2</option>
+                                    <option value="23">divine + 3</option>
+                                    <option value="24">divine + 4</option>
+                                    <option value="25">divine + 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="attribute-row hidden" data-attribute="passing">
+                            <div class="attribute-label">
+                                Passing
+                            </div>
+                            <div class="attribute-select">
+                                <select>
+                                    <option value="1" selected="selected">disastrous</option>
+                                    <option value="2">wretched</option>
+                                    <option value="3">poor</option>
+                                    <option value="4">weak</option>
+                                    <option value="5">inadequate</option>
+                                    <option value="6">passable</option>
+                                    <option value="7">solid</option>
+                                    <option value="8">excellent</option>
+                                    <option value="9">formidable</option>
+                                    <option value="10">outstanding</option>
+                                    <option value="11">brilliant</option>
+                                    <option value="12">magnificent</option>
+                                    <option value="13">world class</option>
+                                    <option value="14">supernatural</option>
+                                    <option value="15">titanic</option>
+                                    <option value="16">extra-terrestrial</option>
+                                    <option value="17">mythical</option>
+                                    <option value="18">magical</option>
+                                    <option value="19">utopian</option>
+                                    <option value="20">divine</option>
+                                    <option value="21">divine + 1</option>
+                                    <option value="22">divine + 2</option>
+                                    <option value="23">divine + 3</option>
+                                    <option value="24">divine + 4</option>
+                                    <option value="25">divine + 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="attribute-row hidden" data-attribute="scoring">
+                            <div class="attribute-label">
+                                Scoring
+                            </div>
+                            <div class="attribute-select">
+                                <select>
+                                    <option value="1" selected="selected">disastrous</option>
+                                    <option value="2">wretched</option>
+                                    <option value="3">poor</option>
+                                    <option value="4">weak</option>
+                                    <option value="5">inadequate</option>
+                                    <option value="6">passable</option>
+                                    <option value="7">solid</option>
+                                    <option value="8">excellent</option>
+                                    <option value="9">formidable</option>
+                                    <option value="10">outstanding</option>
+                                    <option value="11">brilliant</option>
+                                    <option value="12">magnificent</option>
+                                    <option value="13">world class</option>
+                                    <option value="14">supernatural</option>
+                                    <option value="15">titanic</option>
+                                    <option value="16">extra-terrestrial</option>
+                                    <option value="17">mythical</option>
+                                    <option value="18">magical</option>
+                                    <option value="19">utopian</option>
+                                    <option value="20">divine</option>
+                                    <option value="21">divine + 1</option>
+                                    <option value="22">divine + 2</option>
+                                    <option value="23">divine + 3</option>
+                                    <option value="24">divine + 4</option>
+                                    <option value="25">divine + 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="scale-row">
+                            <div class="scale-label">
+                                Secondary Skills Weight
+                                <span>1.0</span>
+                            </div>
+                            <div class="scale-range">
+                                <input type="range" min="1" max="5" step=".1" value="1" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ideal-skills">
+                        <div class="ideal-skill-row" data-ideal-skill="defending">
+                            <div class="ideal-skill-label">
+                                Defending
+                            </div>
+                            <div class="ideal-skill-score">
+                                
+                            </div>
+                        </div>
+                        <div class="ideal-skill-row" data-ideal-skill="playmaking">
+                            <div class="ideal-skill-label">
+                                Playmaking
+                            </div>
+                            <div class="ideal-skill-score">
+                                
+                            </div>
+                        </div>
+                        <div class="ideal-skill-row" data-ideal-skill="winger">
+                            <div class="ideal-skill-label">
+                                Winger
+                            </div>
+                            <div class="ideal-skill-score">
+                                
+                            </div>
+                        </div>
+                        <div class="ideal-skill-row" data-ideal-skill="passing">
+                            <div class="ideal-skill-label">
+                                Passing
+                            </div>
+                            <div class="ideal-skill-score">
+                                
+                            </div>
+                        </div>
+                        <div class="ideal-skill-row" data-ideal-skill="scoring">
+                            <div class="ideal-skill-label">
+                                Scoring
+                            </div>
+                            <div class="ideal-skill-score">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="estimate-wages">Estimate Wages</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer id="footer">
+            <p>Based on percentages provided here: <a href="https://wiki.hattrick.org/wiki/Skill_contribution">https://wiki.hattrick.org/wiki/Skill_contribution</a></p>
+        </footer>
+    </body>
+</html>

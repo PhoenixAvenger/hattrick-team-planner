@@ -1,0 +1,134 @@
+:root {
+    --gap: 1rem;
+    --gap-sm: 0.75rem;
+    --gap-xs: 0.5rem;
+
+    --gray: #CCCCCC;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+select {
+    vertical-align: top;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#header {
+    background: #EFEFEF;
+    padding: 20px;
+    text-align: center;
+}
+#navigation {
+    padding: 20px 0 0;
+    display: flex;
+    justify-content: center;
+}
+#navigation div {
+    padding: var(--gap);
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+#navigation div:hover {
+    background: #EFEFEF;
+}
+#navigation div.active {
+    border-color: #000000;
+}
+
+#main {
+    padding: 40px 20px;
+}
+.player {
+    max-width: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+.calculate-contributions .player,
+.calculate-ideal-skills .player {
+    background: var(--gray);
+    padding: var(--gap-xs);
+    border-radius: var(--gap-xs);
+    margin: 0 auto;
+}
+
+.attributes,
+.details,
+.contributions,
+.ideal-skills,
+.actions {
+    width: calc(50% - var(--gap-xs));
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray);
+    padding: var(--gap);
+    border-radius: var(--gap-xs);
+    background: #FFFFFF;
+}
+.details,
+.actions {
+    width: 100%;
+    align-items: center;
+}
+.attribute-row,
+.detail-row,
+.contribution-row,
+.ideal-skill-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calculate-contributions .attribute-row + .attribute-row,
+.detail-row + .detail-row,
+.contribution-row + .contribution-row,
+.ideal-skill-row + .ideal-skill-row {
+    margin-top: var(--gap-sm);
+    border-top: 1px solid var(--gray);
+    padding-top: var(--gap-sm);
+}
+.detail-row select + select {
+    margin-left: var(--gap);
+}
+.scale-row {
+    margin-top: var(--gap-sm);
+    border-top: 1px solid var(--gray);
+    padding-top: var(--gap-sm);
+    display: flex;
+    flex-direction: column;
+}
+.scale-label {
+    display: flex;
+    justify-content: space-between;
+}
+.scale-range {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+}
+.detail-heading {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: var(--gap);
+}
+
+#footer {
+    background: #EFEFEF;
+    padding: 20px;
+    text-align: center;
+}
